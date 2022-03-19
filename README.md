@@ -4,7 +4,7 @@ Torch is a 7 Days to Die mod which works to optimize one of the game's most inef
 
 # Installation Guide
 
-Torch is a client only mod that uses some C# scripts. All that is needed is to download the Mod and simply drop the mod into your Mods folder where 7 Days to Die is installed. Then launch the game with Easy Anti Cheat disabled. No other work is required in order to take advanatage of the mod.
+Torch is a client only mod. All that is needed is to download the Mod and simply drop the mod into your Mods folder where 7 Days to Die is installed. Then launch the game with Easy Anti Cheat disabled. Check to see if Occlusion is on in the main menu Video Settings, if it is off, turn it on. No other work is required in order to take advanatage of the mod.
 
 Not sure if you installed the mod correctly? Try checking the console in game by pressing F1 and scroll up to the part where the mods are loading. If the mod is installed correctly, these following lines should be shown.
 
