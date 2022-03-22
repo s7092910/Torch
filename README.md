@@ -17,3 +17,26 @@ Not sure if you installed the mod correctly? Try checking the console in game by
 [Torch] [LightOcclusionManager] Light Occlusion: Awake
 [Torch] Loaded Patch
 ```
+
+# Compatibility
+
+Torch uses the built in Occlusion Culling System in 7 Days to Die. As such, a GPU that supports DirectX 11.0 or OpenGL 4.3 is required, which covers most graphics cards released after 2010. If you have one of the following GPUs you likely do have a GPU that will support Torch
+
+* INTEL HD Graphics 2500/4000 (Ivy Bridge) or newer
+* NVIDIA GeForce 400 Series (Fermi) or newer
+* AMD Radeon HD 5000 Series (TeraScale 2) or newer
+
+If you encounter issues with Torch, make sure that your graphics drivers are up to date.
+
+If your GPU doesn't support some features required by Torch, an error message will appear in the console in game. You will see one of two error messages.
+
+```Text
+[Torch] [LightOcclusionManager] Light Occlusion: GPU doesn't supports Async GPU Readback
+[Torch] [LightOcclusionManager] Light Occlusion: GPU doesn't supports Compute Shaders
+```
+
+# Technical details
+
+Of course, it isn't possible to say that the game is magically faster without providing some kinda of explanation. This section will cover some of the changes and additons that are responsible for performance improvements. Not all changes and additions will be listed.
+
+* With Unity's built in render pipeline, if the camera is facing a direction, it will create shadow maps and do other related rendering for any lights within the Camera's frustum even if the light source is behind a wall and any part of the light's bounding volume is not visible to the camera. This process can be fairly intenstive while haven't no affect on the final frame. Torch does a check to see if the light's bounding volume is visible and culls the light if it's bounding volume is not visible early on in the rendering process. 
