@@ -40,3 +40,8 @@ If your GPU doesn't support some features required by Torch, an error message wi
 Of course, it isn't possible to say that the game is magically faster without providing some kinda of explanation. This section will cover some of the changes and additons that are responsible for performance improvements. Not all changes and additions will be listed.
 
 * With Unity's built in render pipeline, if the camera is facing a direction, it will create shadow maps and do other related rendering for any lights within the Camera's frustum even if the light source is behind a wall and any part of the light's bounding volume is not visible to the camera. This process can be fairly intenstive while haven't no affect on the final frame. Torch does a check to see if the light's bounding volume is visible and culls the light if it's bounding volume is not visible early on in the rendering process. 
+
+# Contact
+There is a hosted channel in Guppy's Unofficial 7DtD Modding Server Discord. The channel is `#laydors-toolshed`
+
+* [Guppy's Unofficial 7DtD Modding Server Discord](https://discord.gg/mQpvj95rvW)
